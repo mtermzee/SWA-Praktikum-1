@@ -5,8 +5,11 @@
 */
 package de.hsos.swa.ssa;
 
+import de.hsos.swa.ssa.ui.controller.MenueControl;
+
 public class Start {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        MenueControl menueControl = new MenueControl();
+        menueControl.handleMenueView();
     }
 }
