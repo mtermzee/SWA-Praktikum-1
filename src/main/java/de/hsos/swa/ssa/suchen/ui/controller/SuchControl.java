@@ -2,6 +2,7 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 
 import java.util.Scanner;
 
+import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.SucheWare;
 import de.hsos.swa.ssa.suchen.ui.view.SuchView;
 
@@ -10,7 +11,7 @@ public class SuchControl {
     SuchView suchView = new SuchView();
 
     // interface
-    SucheWare sucheWare;
+    SucheWare sucheWare = new EinkaueferIn();
 
     Scanner auswhal = new Scanner(System.in);
     Scanner input = new Scanner(System.in);
@@ -47,6 +48,6 @@ public class SuchControl {
     }
 
     public void sucheWarenMitNummer(long warennummer) {
-        System.out.println(sucheWare.sucheWare(warennummer));
+        sucheWare.sucheWare(warennummer);
     }
 }

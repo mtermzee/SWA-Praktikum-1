@@ -17,11 +17,11 @@ public class ShopRepository implements ShopRepositoryDAO {
     private Connection transConnection;
 
     // Define SQL sentences
-    private static final String SQL_SELECT = "SELECT nummer, name, preis, beschreibung FROM ware";
-    private static final String SQL_SELECT_ONE = "SELECT nummer, name, preis, beschreibung FROM ware WHERE nummer = ?";
-    private static final String SQL_INSERT = "INSERT INTO ware(nummer, name, preis, beschreibung) VALUES (?,?,?,?)";
-    private static final String SQL_UPDATE = "UPDATE ware SET name=?,preis=?, beschreibung=? WHERE nummer = ?";
-    private static final String SQL_DELETE = "DELETE FROM waret WHERE nummer = ?";
+    private static final String SQL_SELECT = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware";
+    private static final String SQL_SELECT_ONE = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
+    private static final String SQL_INSERT = "INSERT INTO ware(warenummer, warename, ware_preis, ware_beschreibung) VALUES (?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE ware SET warename=?, ware_preis=?, ware_beschreibung=? WHERE warenummer = ?";
+    private static final String SQL_DELETE = "DELETE FROM ware WHERE warenummer = ?";
 
     public ShopRepository(Connection conn) {
         this.transConnection = conn;
@@ -138,7 +138,7 @@ public class ShopRepository implements ShopRepositoryDAO {
     }
 
     @Override
-    public Ware select(int wareID) throws SQLException {
+    public Ware select(long wareID) throws SQLException {
         Connection conn = null;
         PreparedStatement pStatement = null;
         ResultSet rs = null;
@@ -146,14 +146,14 @@ public class ShopRepository implements ShopRepositoryDAO {
         try {
             conn = this.transConnection != null ? this.transConnection : getConnection();
             pStatement = conn.prepareStatement(SQL_SELECT_ONE);
-            pStatement.setInt(1, wareID);
+            pStatement.setLong(1, wareID);
             rs = pStatement.executeQuery();
             while (rs.next()) {
                 ware = new Ware(
-                        rs.getLong("nummer"),
-                        rs.getString("name"),
-                        rs.getDouble("preis"),
-                        rs.getString("beschreibung"));
+                        rs.getLong("warenummer"),
+                        rs.getString("warename"),
+                        rs.getDouble("ware_preis"),
+                        rs.getString("ware_beschreibung"));
             }
 
         } catch (SQLSyntaxErrorException ex) {
@@ -191,10 +191,10 @@ public class ShopRepository implements ShopRepositoryDAO {
             rs = pStatement.executeQuery();
             while (rs.next()) {
                 wares.add(new Ware(
-                        rs.getLong("nummer"),
-                        rs.getString("name"),
-                        rs.getDouble("preis"),
-                        rs.getString("beschreibung")));
+                        rs.getLong("warenummer"),
+                        rs.getString("warename"),
+                        rs.getDouble("ware_preis"),
+                        rs.getString("ware_beschreibung")));
             }
         } catch (SQLSyntaxErrorException ex) {
             System.err.println("Error: " + ex.getMessage());

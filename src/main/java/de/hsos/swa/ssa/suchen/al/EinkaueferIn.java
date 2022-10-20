@@ -1,7 +1,11 @@
 package de.hsos.swa.ssa.suchen.al;
 
+import java.sql.SQLException;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
+import de.hsos.swa.ssa.JDBC.repository.ShopRepository;
 import de.hsos.swa.ssa.suchen.acl.WarenkorbFuerSuche;
 import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.Ware;
@@ -10,6 +14,11 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     // services
     WarenSuchenUndPruefen warenSuchenUndPruefen;
     WarenkorbVerwalten warenkorbVerwalten;
+
+    // Database
+    ShopRepository shopRepository = new ShopRepository();
+
+    Scanner input = new Scanner(System.in);
 
     @Override
     public boolean wareZuWarenkorbHinzufuegen(Ware ware) {
@@ -31,7 +40,21 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
 
     @Override
     public Ware sucheWare(long warenNummer) {
-        // TODO Auto-generated method stub
+        try {
+            Ware ware = this.shopRepository.select(warenNummer);
+            if (ware != null) {
+                System.out.println(ware.toString());
+            } else {
+                System.out.println("ware not found");
+            }
+            input.nextLine();
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } catch (InputMismatchException ex) {
+            System.out.println("oh no! the input was type wrong.\n come back and try again.");
+            input.nextLine();
+            input.nextLine();
+        }
         return null;
     }
 
@@ -46,5 +69,4 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
         // TODO Auto-generated method stub
         return null;
     }
-
 }

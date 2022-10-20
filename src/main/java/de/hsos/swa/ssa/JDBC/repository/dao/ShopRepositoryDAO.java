@@ -13,7 +13,7 @@ public interface ShopRepositoryDAO {
 
     public int delete(int productID) throws SQLException;
 
-    public Ware select(int productID) throws SQLException;
+    public Ware select(long productID) throws SQLException;
 
     public List<Ware> selectAll() throws SQLException;
 }
