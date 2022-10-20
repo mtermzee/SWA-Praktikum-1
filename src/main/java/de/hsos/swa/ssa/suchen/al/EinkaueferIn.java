@@ -1,6 +1,7 @@
 package de.hsos.swa.ssa.suchen.al;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
@@ -34,7 +35,22 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
 
     @Override
     public List<Ware> sucheWare(String warenName) {
-        // TODO Auto-generated method stub
+        List<Ware> wares = new ArrayList<Ware>();
+        try {
+            wares = this.shopRepository.select(warenName);
+            if (wares != null) {
+                wares.forEach(System.out::println);
+            } else {
+                System.out.println("ware not found");
+            }
+            input.nextLine();
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } catch (InputMismatchException ex) {
+            System.out.println("oh no! the input was type wrong.\n come back and try again.");
+            input.nextLine();
+            input.nextLine();
+        }
         return null;
     }
 

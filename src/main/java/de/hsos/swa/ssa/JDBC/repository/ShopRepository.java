@@ -18,7 +18,8 @@ public class ShopRepository implements ShopRepositoryDAO {
 
     // Define SQL sentences
     private static final String SQL_SELECT = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware";
-    private static final String SQL_SELECT_ONE = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
+    private static final String SQL_SELECT_ONE_BY_ID = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
+    private static final String SQL_SELECT_ONE_BY_NAME = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warename = ?";
     private static final String SQL_INSERT = "INSERT INTO ware(warenummer, warename, ware_preis, ware_beschreibung) VALUES (?,?,?,?)";
     private static final String SQL_UPDATE = "UPDATE ware SET warename=?, ware_preis=?, ware_beschreibung=? WHERE warenummer = ?";
     private static final String SQL_DELETE = "DELETE FROM ware WHERE warenummer = ?";
@@ -145,7 +146,7 @@ public class ShopRepository implements ShopRepositoryDAO {
         Ware ware = null;
         try {
             conn = this.transConnection != null ? this.transConnection : getConnection();
-            pStatement = conn.prepareStatement(SQL_SELECT_ONE);
+            pStatement = conn.prepareStatement(SQL_SELECT_ONE_BY_ID);
             pStatement.setLong(1, wareID);
             rs = pStatement.executeQuery();
             while (rs.next()) {
@@ -176,6 +177,48 @@ public class ShopRepository implements ShopRepositoryDAO {
 
         }
         return ware;
+    }
+
+    @Override
+    public List<Ware> select(String productName) throws SQLException {
+        Connection conn = null;
+        PreparedStatement pStatement = null;
+        ResultSet rs = null;
+        List<Ware> wares = new ArrayList<>();
+
+        try {
+            conn = this.transConnection != null ? this.transConnection : getConnection();
+            pStatement = conn.prepareStatement(SQL_SELECT_ONE_BY_NAME);
+            pStatement.setString(1, productName);
+            rs = pStatement.executeQuery();
+            while (rs.next()) {
+                wares.add(new Ware(
+                        rs.getLong("warenummer"),
+                        rs.getString("warename"),
+                        rs.getDouble("ware_preis"),
+                        rs.getString("ware_beschreibung")));
+            }
+
+        } catch (SQLSyntaxErrorException ex) {
+            System.err.println("Error: " + ex.getMessage());
+        } catch (CommunicationsException ex) {
+            System.err.println("Error: Can't connect with database server");
+        } finally {
+            try {
+                if (rs != null)
+                    close(rs);
+                if (pStatement != null)
+                    close(pStatement);
+                if (conn != null) {
+                    if (this.transConnection == null)
+                        close(conn);
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        }
+        return wares;
     }
 
     @Override

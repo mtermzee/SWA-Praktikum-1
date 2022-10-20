@@ -44,7 +44,7 @@ public class SuchControl {
     }
 
     public void sucheWarenMitName(String warenname) {
-        System.out.println(sucheWare.sucheWare(warenname));
+        sucheWare.sucheWare(warenname);
     }
 
     public void sucheWarenMitNummer(long warennummer) {

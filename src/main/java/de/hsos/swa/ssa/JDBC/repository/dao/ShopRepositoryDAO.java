@@ -15,5 +15,7 @@ public interface ShopRepositoryDAO {
 
     public Ware select(long productID) throws SQLException;
 
+    public List<Ware> select(String productName) throws SQLException;
+
     public List<Ware> selectAll() throws SQLException;
 }
