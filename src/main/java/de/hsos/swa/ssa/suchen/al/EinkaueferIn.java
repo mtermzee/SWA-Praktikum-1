@@ -40,7 +40,9 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
             wares = this.shopRepository.select(warenName);
             if (wares != null) {
                 wares.forEach(System.out::println);
-            } else {
+                System.out.println("waren gefunden = " + wares.size());
+            }
+            if (wares.size() == 0) {
                 System.out.println("ware not found");
             }
             input.nextLine();
