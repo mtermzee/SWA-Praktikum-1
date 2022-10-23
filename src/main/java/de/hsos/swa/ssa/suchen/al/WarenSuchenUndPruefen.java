@@ -22,4 +22,8 @@ public class WarenSuchenUndPruefen {
     public List<Produktinformation> getWareInfos(long wareNummer) {
         return katalog.gebeProduktinformationen(wareNummer);
     }
+
+    public List<Ware> getWaren() {
+        return katalog.gebeWaren();
+    }
 }

@@ -97,13 +97,6 @@ public class WarenRepository implements Katalog {
         List<Ware> wares = new ArrayList<Ware>();
         try {
             wares = this.shopRepository.selectAll();
-            if (wares != null) {
-                wares.forEach(System.out::println);
-            }
-            if (wares.size() == 0) {
-                System.out.println("ware not found");
-            }
-            input.nextLine();
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
@@ -111,7 +104,7 @@ public class WarenRepository implements Katalog {
             input.nextLine();
             input.nextLine();
         }
-        return null;
+        return wares;
     }
 
 }

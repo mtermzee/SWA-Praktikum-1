@@ -43,4 +43,10 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
         // TODO Auto-generated method stub
         return null;
     }
+
+    @Override
+    public List<Ware> holeWaren() {
+        // TODO Auto-generated method stub
+        return warenSuchenUndPruefen.getWaren();
+    }
 }
