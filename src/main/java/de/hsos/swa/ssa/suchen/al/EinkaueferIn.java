@@ -57,9 +57,9 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     }
 
     @Override
-    public Ware sucheWare(long warenNummer) {
+    public Ware sucheWare(long wareNummer) {
         try {
-            Ware ware = this.shopRepository.select(warenNummer);
+            Ware ware = this.shopRepository.select(wareNummer);
             if (ware != null) {
                 System.out.println(ware.toString());
             } else {

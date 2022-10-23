@@ -21,7 +21,7 @@ public class WarenRepository implements Katalog {
     }
 
     @Override
-    public List<Ware> suchen(long wareNummer) {
+    public Ware suchen(long wareNummer) {
         // TODO Auto-generated method stub
         return null;
     }

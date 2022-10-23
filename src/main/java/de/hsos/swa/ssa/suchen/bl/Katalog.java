@@ -7,7 +7,7 @@ public interface Katalog {
 
     List<Ware> suchen(String wareName);
 
-    List<Ware> suchen(long wareNummer);
+    Ware suchen(long wareNummer);
 
     void gebeProduktinformationen(Ware ware);
 }

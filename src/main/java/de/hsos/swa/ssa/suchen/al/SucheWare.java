@@ -7,5 +7,5 @@ import de.hsos.swa.ssa.suchen.bl.Ware;
 public interface SucheWare {
     List<Ware> sucheWare(String warenName);
 
-    Ware sucheWare(long warenNummer);
+    Ware sucheWare(long wareNummer);
 }
