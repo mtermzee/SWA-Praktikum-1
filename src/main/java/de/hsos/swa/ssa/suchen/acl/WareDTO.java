@@ -8,6 +8,9 @@ public class WareDTO {
     double preis;
     String beschreibung;
 
+    public WareDTO() {
+    }
+
     public WareDTO(Ware ware) {
         this.nummer = ware.getNummer();
         this.name = ware.getName();
@@ -24,4 +27,11 @@ public class WareDTO {
     public WareDTO wareToDTO(Ware ware) {
         return WarenKonverter.konvertiere(ware);
     }
+
+    @Override
+    public String toString() {
+        return "WareDTO [nummer=" + nummer + ", name=" + name + ", preis=" + preis + ", beschreibung=" + beschreibung
+                + "]";
+    }
+
 }

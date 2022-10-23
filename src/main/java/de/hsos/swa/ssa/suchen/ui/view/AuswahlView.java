@@ -8,8 +8,9 @@ public class AuswahlView {
 
     public void auswahlStartListe() {
         System.out.println();
-        System.out.println("(1) Ware zum Warenkorb hinzufügen");
-        System.out.println("(2) Waren anzeigen");
+        System.out.println("(1) Warenkorb erstellen/wehcseln");
+        System.out.println("(2) Ware zum Warenkorb hinzufügen");
+        System.out.println("(3) Waren anzeigen");
         System.out.println("(!) Zurück beliebige Taste drücken");
         System.out.println();
     }

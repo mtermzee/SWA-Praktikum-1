@@ -25,11 +25,16 @@ public class AuswahlControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
+                    System.out.println("Warenkorb Nummer eingeben");
+                    warennummer = input.nextLong();
+                    waehleWare.aktuellerWarenkorbWechseln(warennummer);
+                    break;
+                case "2":
                     System.out.println("Warennummer eingeben: ");
                     warennummer = input.nextLong();
                     waehleWare(warennummer);
                     break;
-                case "2":
+                case "3":
                     auswahlView.druckWaren(waehleWare.holeWaren());
                     break;
                 default:
@@ -41,6 +46,6 @@ public class AuswahlControl {
     }
 
     public void waehleWare(long warennummer) {
-        System.out.println(waehleWare.wareZuWarenkorbHinzufuegen(null));
+        waehleWare.wareZuWarenkorbHinzufuegen(warennummer);
     }
 }

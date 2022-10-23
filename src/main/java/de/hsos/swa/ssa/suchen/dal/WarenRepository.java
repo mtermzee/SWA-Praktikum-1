@@ -46,13 +46,14 @@ public class WarenRepository implements Katalog {
             input.nextLine();
             input.nextLine();
         }
-        return null;
+        return wares;
     }
 
     @Override
     public Ware suchen(long wareNummer) {
+        Ware ware = new Ware();
         try {
-            Ware ware = this.shopRepository.select(wareNummer);
+            ware = this.shopRepository.select(wareNummer);
             if (ware != null) {
                 System.out.println(ware.toString());
             } else {
@@ -66,7 +67,7 @@ public class WarenRepository implements Katalog {
             input.nextLine();
             input.nextLine();
         }
-        return null;
+        return ware;
     }
 
     @Override
@@ -89,7 +90,7 @@ public class WarenRepository implements Katalog {
             input.nextLine();
             input.nextLine();
         }
-        return null;
+        return wareInfos;
     }
 
     @Override

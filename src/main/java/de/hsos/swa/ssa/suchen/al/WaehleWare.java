@@ -5,7 +5,9 @@ import java.util.List;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
 public interface WaehleWare {
-    boolean wareZuWarenkorbHinzufuegen(Ware ware);
+    boolean wareZuWarenkorbHinzufuegen(long wareNummer);
+
+    void aktuellerWarenkorbWechseln(long warenNummer);
 
     List<Ware> holeWaren();
 }

@@ -4,4 +4,6 @@ public interface WarenkorbStaender {
     Warenkorb holeWarenkorb();
 
     Warenkorb holeWarenkorb(long warenKorbNummer);
+
+    void aktuellerWarenkorbWechseln(long warenkorbNummer);
 }

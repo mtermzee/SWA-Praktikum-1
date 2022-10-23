@@ -9,6 +9,9 @@ public class Ware {
     String beschreibung;
     List<Produktinformation> produktinformationen;
 
+    public Ware() {
+    }
+
     public Ware(long nummer, String name, double preis, String beschreibung) {
         this.nummer = nummer;
         this.name = name;
