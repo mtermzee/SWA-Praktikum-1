@@ -3,6 +3,7 @@ package de.hsos.swa.ssa.JDBC.repository.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
 public interface ShopRepositoryDAO {
@@ -16,6 +17,8 @@ public interface ShopRepositoryDAO {
     public Ware select(long productID) throws SQLException;
 
     public List<Ware> select(String productName) throws SQLException;
+
+    public List<Produktinformation> selectInofs(long productID) throws SQLException;
 
     public List<Ware> selectAll() throws SQLException;
 }

@@ -7,6 +7,8 @@ import com.mysql.cj.jdbc.exceptions.CommunicationsException;
 
 import de.hsos.swa.ssa.JDBC.repository.dao.ShopRepositoryDAO;
 import static de.hsos.swa.ssa.JDBC.sql.MysqlConnection.*;
+
+import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
 import java.sql.*;
@@ -20,6 +22,7 @@ public class ShopRepository implements ShopRepositoryDAO {
     private static final String SQL_SELECT = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware";
     private static final String SQL_SELECT_ONE_BY_ID = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
     private static final String SQL_SELECT_ONE_BY_NAME = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warename = ?";
+    private static final String SQL_SELECT_ONE_BY_INFO = "SELECT wareinfo_nr, wareinfo_bezeichnung, wareinfo_information FROM wareinformation WHERE warenummer = ?";
     private static final String SQL_INSERT = "INSERT INTO ware(warenummer, warename, ware_preis, ware_beschreibung) VALUES (?,?,?,?)";
     private static final String SQL_UPDATE = "UPDATE ware SET warename=?, ware_preis=?, ware_beschreibung=? WHERE warenummer = ?";
     private static final String SQL_DELETE = "DELETE FROM ware WHERE warenummer = ?";
@@ -258,6 +261,46 @@ public class ShopRepository implements ShopRepositoryDAO {
             }
         }
         return wares;
+    }
+
+    @Override
+    public List<Produktinformation> selectInofs(long productID) throws SQLException {
+        Connection conn = null;
+        PreparedStatement pStatement = null;
+        ResultSet rs = null;
+        List<Produktinformation> wareInfos = new ArrayList<>();
+
+        try {
+            conn = this.transConnection != null ? this.transConnection : getConnection();
+            pStatement = conn.prepareStatement(SQL_SELECT_ONE_BY_INFO);
+            pStatement.setLong(1, productID);
+            rs = pStatement.executeQuery();
+            while (rs.next()) {
+                wareInfos.add(new Produktinformation(
+                        rs.getString("wareinfo_bezeichnung"),
+                        rs.getString("wareinfo_information")));
+            }
+
+        } catch (SQLSyntaxErrorException ex) {
+            System.err.println("Error: " + ex.getMessage());
+        } catch (CommunicationsException ex) {
+            System.err.println("Error: Can't connect with database server");
+        } finally {
+            try {
+                if (rs != null)
+                    close(rs);
+                if (pStatement != null)
+                    close(pStatement);
+                if (conn != null) {
+                    if (this.transConnection == null)
+                        close(conn);
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+        }
+        return wareInfos;
     }
 
 }

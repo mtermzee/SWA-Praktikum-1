@@ -3,6 +3,7 @@ package de.hsos.swa.ssa.suchen.al;
 import java.util.List;
 
 import de.hsos.swa.ssa.suchen.bl.Katalog;
+import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 import de.hsos.swa.ssa.suchen.dal.WarenRepository;
 
@@ -16,5 +17,9 @@ public class WarenSuchenUndPruefen {
 
     public Ware getSucheBeiNummer(long wareNummer) {
         return katalog.suchen(wareNummer);
+    }
+
+    public List<Produktinformation> getWareInfos(long wareNummer) {
+        return katalog.gebeProduktinformationen(wareNummer);
     }
 }

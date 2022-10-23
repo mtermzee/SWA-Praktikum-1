@@ -9,5 +9,7 @@ public interface Katalog {
 
     Ware suchen(long wareNummer);
 
-    void gebeProduktinformationen(Ware ware);
+    List<Produktinformation> gebeProduktinformationen(long wareNummer);
+
+    List<Ware> gebeWaren();
 }

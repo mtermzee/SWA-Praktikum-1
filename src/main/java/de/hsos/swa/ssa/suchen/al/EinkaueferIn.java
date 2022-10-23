@@ -18,9 +18,8 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     }
 
     @Override
-    public List<Produktinformation> holeDetailInformation(Ware ware) {
-        // TODO Auto-generated method stub
-        return null;
+    public List<Produktinformation> holeDetailInformation(long wareNummer) {
+        return warenSuchenUndPruefen.getWareInfos(wareNummer);
     }
 
     @Override
