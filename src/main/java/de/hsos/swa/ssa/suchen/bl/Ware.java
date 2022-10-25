@@ -116,7 +116,8 @@ public class Ware {
     @Override
     public String toString() {
         return "Ware [nummer=" + nummer + ", name=" + name + ", preis=" + preis + ", beschreibung=" + beschreibung
-                + ", produktinformationen=" + produktinformationen + "]";
+                + "]";
+        // + ", produktinformationen=" + produktinformationen
     }
 
 }
