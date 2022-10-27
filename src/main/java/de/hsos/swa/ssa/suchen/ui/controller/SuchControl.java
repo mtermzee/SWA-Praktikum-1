@@ -29,6 +29,7 @@ public class SuchControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
+                    switchAlgorithmus();
                     System.out.println("Warenname eingeben: ");
                     warenname = input.nextLine();
                     sucheWarenMitName(warenname);
@@ -44,6 +45,24 @@ public class SuchControl {
                     break;
             }
         } while (weiter);
+    }
+
+    public void switchAlgorithmus() {
+        suchView.algorithmusListe();
+        option = auswhal.nextLine();
+        switch (option) {
+            case "1":
+                // sucheWare = new SucheWare(new KeywordMatching());
+                System.out.println("Keyword Matching");
+                break;
+            case "2":
+                // sucheWare = new SucheWare(new SemanticMatching());
+                System.out.println("Semantic Matching");
+                break;
+            default:
+                System.out.println("Keyword Matching");
+                break;
+        }
     }
 
     public void sucheWarenMitName(String warenname) {
