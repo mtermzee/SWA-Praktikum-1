@@ -31,4 +31,17 @@ public class WarenSuchenUndPruefen {
     public void algoAsuweahlen(SuchAlgorithmus suchalgorithmus) {
         katalog.legeSuchalgorithmusFest(suchalgorithmus);
     }
+
+    public void wareHinzufuegen(Ware ware) {
+        katalog.addWare(ware);
+    }
+
+    public void wareLoeschen(long wareNummer) {
+        katalog.deleteWare(wareNummer);
+    }
+
+    public void wareAendern(Ware ware) {
+        katalog.updateWare(ware);
+    }
+
 }

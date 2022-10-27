@@ -11,6 +11,7 @@ public class SuchenStartControl {
     SuchControl suchControl;
     PruefControl pruefControl;
     AuswahlControl auswahlControl;
+    WareControl wareControl;
 
     // view
     SuchenStartView suchenStartView;
@@ -29,6 +30,7 @@ public class SuchenStartControl {
         suchControl = new SuchControl(einkaueferIn);
         pruefControl = new PruefControl(einkaueferIn);
         auswahlControl = new AuswahlControl(einkaueferIn);
+        wareControl = new WareControl(einkaueferIn);
         suchenStartView = new SuchenStartView();
         holeWarenkorb = einkaueferIn;
     }
@@ -45,12 +47,15 @@ public class SuchenStartControl {
                     pruefControl.handelPruefView();
                     break;
                 case "3":
-                    auswahlControl.handelAuswahlView();
+                    wareControl.handelWareView();
                     break;
                 case "4":
-                    holeWareAusWarenkorb();
+                    auswahlControl.handelAuswahlView();
                     break;
                 case "5":
+                    holeWareAusWarenkorb();
+                    break;
+                case "6":
                     System.out.println("Warennummer eingeben: ");
                     warennummer = input.nextLong();
                     holeWareAusWarenkorbMitNummer(warennummer);

@@ -114,4 +114,45 @@ public class WarenRepository implements Katalog {
         return wares;
     }
 
+    @Override
+    public void addWare(Ware ware) {
+        try {
+            this.shopRepository.insert(ware);
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } catch (InputMismatchException ex) {
+            System.out.println("oh no! the input was type wrong.\n come back and try again.");
+            input.nextLine();
+            input.nextLine();
+        }
+
+    }
+
+    @Override
+    public void deleteWare(long wareNummer) {
+        try {
+            this.shopRepository.delete(wareNummer);
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } catch (InputMismatchException ex) {
+            System.out.println("oh no! the input was type wrong.\n come back and try again.");
+            input.nextLine();
+            input.nextLine();
+        }
+
+    }
+
+    @Override
+    public void updateWare(Ware ware) {
+        try {
+            this.shopRepository.update(ware);
+        } catch (SQLException ex) {
+            System.err.println(ex.getMessage());
+        } catch (InputMismatchException ex) {
+            System.out.println("oh no! the input was type wrong.\n come back and try again.");
+            input.nextLine();
+            input.nextLine();
+        }
+    }
+
 }

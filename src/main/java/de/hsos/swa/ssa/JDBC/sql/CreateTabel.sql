@@ -1,4 +1,4 @@
--- Active: 1649604676347@@127.0.0.1@3306@test_simple_shop
+-- Active: 1662967369138@@127.0.0.1@3306@test_simple_shop
 
 CREATE TABLE
     ware (
@@ -14,7 +14,7 @@ CREATE TABLE
         wareinfo_bezeichnung VARCHAR(77),
         wareinfo_information VARCHAR(77),
         warenummer int,
-        CONSTRAINT fk_wareinfo_ware FOREIGN KEY (warenummer) REFERENCES ware (warenummer)
+        CONSTRAINT fk_wareinfo_ware FOREIGN KEY (warenummer) REFERENCES ware (warenummer) ON DELETE CASCADE ON UPDATE CASCADE
     ) COMMENT '';
 
 DROP TABLE IF EXISTS ware;

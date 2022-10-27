@@ -12,7 +12,7 @@ public interface ShopRepositoryDAO {
 
     public int update(Ware product) throws SQLException;
 
-    public int delete(int productID) throws SQLException;
+    public int delete(long productID) throws SQLException;
 
     public Ware select(long productID) throws SQLException;
 

@@ -22,7 +22,7 @@ public class ShopRepository implements ShopRepositoryDAO {
     private static final String SQL_SELECT = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware";
     private static final String SQL_SELECT_ONE_BY_ID = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
     private static final String SQL_SELECT_BY_INFO = "SELECT wareinfo_nr, wareinfo_bezeichnung, wareinfo_information FROM wareinformation WHERE warenummer = ?";
-    private static final String SQL_INSERT = "INSERT INTO ware(warenummer, warename, ware_preis, ware_beschreibung) VALUES (?,?,?,?)";
+    private static final String SQL_INSERT = "INSERT INTO ware(warename, ware_preis, ware_beschreibung) VALUES (?,?,?)";
     private static final String SQL_UPDATE = "UPDATE ware SET warename=?, ware_preis=?, ware_beschreibung=? WHERE warenummer = ?";
     private static final String SQL_DELETE = "DELETE FROM ware WHERE warenummer = ?";
 
@@ -111,14 +111,14 @@ public class ShopRepository implements ShopRepositoryDAO {
     }
 
     @Override
-    public int delete(int wareID) throws SQLException {
+    public int delete(long wareID) throws SQLException {
         Connection conn = null;
         PreparedStatement pStatement = null;
         int result = 0;
         try {
             conn = this.transConnection != null ? this.transConnection : getConnection();
             pStatement = conn.prepareStatement(SQL_DELETE);
-            pStatement.setInt(1, wareID);
+            pStatement.setLong(1, wareID);
             result = pStatement.executeUpdate();
         } catch (SQLSyntaxErrorException ex) {
             System.err.println("Error: " + ex.getMessage());

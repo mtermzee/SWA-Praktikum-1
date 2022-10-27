@@ -7,7 +7,7 @@ import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.SuchAlgorithmus;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
-public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, WaehleWare {
+public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, WaehleWare, VerwalteWare {
     // services
     WarenSuchenUndPruefen warenSuchenUndPruefen = new WarenSuchenUndPruefen();
     WarenkorbVerwalten warenkorbVerwalten = new WarenkorbVerwalten();
@@ -61,5 +61,20 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     @Override
     public void algoAsuweahlen(SuchAlgorithmus suchalgorithmus) {
         warenSuchenUndPruefen.algoAsuweahlen(suchalgorithmus);
+    }
+
+    @Override
+    public void addWare(Ware ware) {
+        warenSuchenUndPruefen.wareHinzufuegen(ware);
+    }
+
+    @Override
+    public void deleteWare(long wareNummer) {
+        warenSuchenUndPruefen.wareLoeschen(wareNummer);
+    }
+
+    @Override
+    public void updateWare(Ware ware) {
+        warenSuchenUndPruefen.wareAendern(ware);
     }
 }

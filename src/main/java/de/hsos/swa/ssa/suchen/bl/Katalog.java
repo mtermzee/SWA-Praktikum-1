@@ -12,4 +12,10 @@ public interface Katalog {
     List<Produktinformation> gebeProduktinformationen(long wareNummer);
 
     List<Ware> gebeWaren();
+
+    void addWare(Ware ware);
+
+    void deleteWare(long wareNummer);
+
+    void updateWare(Ware ware);
 }

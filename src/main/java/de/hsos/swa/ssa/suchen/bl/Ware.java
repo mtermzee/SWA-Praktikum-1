@@ -12,6 +12,12 @@ public class Ware {
     public Ware() {
     }
 
+    public Ware(String name, double preis, String beschreibung) {
+        this.name = name;
+        this.preis = preis;
+        this.beschreibung = beschreibung;
+    }
+
     public Ware(long nummer, String name, double preis, String beschreibung) {
         this.nummer = nummer;
         this.name = name;
