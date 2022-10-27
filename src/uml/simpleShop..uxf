@@ -48,8 +48,8 @@ bg=orange</panel_attributes><additional_attributes></additional_attributes></ele
 bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 HoleWarenkorb
 --
-+holeWarenkorb() : WarenkorbFuerSuche
-+holeWarenkorb(wrenkorbnummer : long) : WarenkorbFuerSuche</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
++holeWarenkorb() : WarenkorbStaender
++holeWarenkorb(wrenkorbnummer : long) : WarenkorbStaender</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 SucheWare
 --
 +sucheWare(warenname : string) : Ware [0..n]

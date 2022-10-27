@@ -1,9 +1,9 @@
 package de.hsos.swa.ssa.suchen.al;
 
-import de.hsos.swa.ssa.suchen.acl.WarenkorbFuerSuche;
+import de.hsos.swa.ssa.suchen.acl.Warenkorb;
 
 public interface HoleWarenkorb {
-    WarenkorbFuerSuche holeWarenkorb();
+    Warenkorb holeWarenkorb();
 
-    WarenkorbFuerSuche holeWarenkorb(long warenKorbNummer);
+    Warenkorb holeWarenkorb(long warenKorbNummer);
 }

@@ -1,6 +1,7 @@
 package de.hsos.swa.ssa.suchen.al;
 
 import de.hsos.swa.ssa.suchen.acl.WareDTO;
+import de.hsos.swa.ssa.suchen.acl.Warenkorb;
 import de.hsos.swa.ssa.suchen.acl.WarenkorbFuerSuche;
 import de.hsos.swa.ssa.suchen.acl.WarenkorbImpl;
 import de.hsos.swa.ssa.suchen.acl.WarenkorbStaender;
@@ -28,4 +29,13 @@ public class WarenkorbVerwalten {
     public void aktuelleWarenkorb(long wareNummer) {
         warenkorbStaender.aktuellerWarenkorbWechseln(wareNummer);
     }
+
+    public Warenkorb warenkorbHolen() {
+        return warenkorbStaender.holeWarenkorb();
+    }
+
+    public Warenkorb warenkorbHolen(long warekorbNummer) {
+        return warenkorbStaender.holeWarenkorb(warekorbNummer);
+    }
+
 }

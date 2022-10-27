@@ -2,7 +2,6 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 
 import java.util.Scanner;
 
-import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.SucheWare;
 import de.hsos.swa.ssa.suchen.ui.view.SuchView;
 
@@ -11,7 +10,7 @@ public class SuchControl {
     SuchView suchView = new SuchView();
 
     // interface
-    SucheWare sucheWare = new EinkaueferIn();
+    SucheWare sucheWare;
 
     Scanner auswhal = new Scanner(System.in);
     Scanner input = new Scanner(System.in);
@@ -19,6 +18,10 @@ public class SuchControl {
     boolean weiter = true;
     long warennummer = 0;
     String warenname = "";
+
+    public SuchControl(SucheWare sucheWare) {
+        this.sucheWare = sucheWare;
+    }
 
     public void handelSuchView() {
         do {

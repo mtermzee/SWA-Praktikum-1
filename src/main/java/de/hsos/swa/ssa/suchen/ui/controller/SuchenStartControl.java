@@ -2,17 +2,18 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 
 import java.util.Scanner;
 
+import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.HoleWarenkorb;
 import de.hsos.swa.ssa.suchen.ui.view.SuchenStartView;
 
 public class SuchenStartControl {
     // controllers
-    SuchControl suchControl = new SuchControl();
-    PruefControl pruefControl = new PruefControl();
-    AuswahlControl auswahlControl = new AuswahlControl();
+    SuchControl suchControl;
+    PruefControl pruefControl;
+    AuswahlControl auswahlControl;
 
     // view
-    SuchenStartView suchenStartView = new SuchenStartView();
+    SuchenStartView suchenStartView;
 
     // interface
     HoleWarenkorb holeWarenkorb;
@@ -22,6 +23,15 @@ public class SuchenStartControl {
     String option;
     boolean weiter = true;
     long warennummer = 0;
+
+    public SuchenStartControl() {
+        EinkaueferIn einkaueferIn = new EinkaueferIn();
+        suchControl = new SuchControl(einkaueferIn);
+        pruefControl = new PruefControl(einkaueferIn);
+        auswahlControl = new AuswahlControl(einkaueferIn);
+        suchenStartView = new SuchenStartView();
+        holeWarenkorb = einkaueferIn;
+    }
 
     public void handelSuchenStartView() {
         do {

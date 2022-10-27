@@ -2,7 +2,6 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 
 import java.util.Scanner;
 
-import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.PruefeWare;
 import de.hsos.swa.ssa.suchen.ui.view.PruefView;
 
@@ -11,13 +10,17 @@ public class PruefControl {
     PruefView pruefView = new PruefView();
 
     // interface
-    PruefeWare pruefeWare = new EinkaueferIn();
+    PruefeWare pruefeWare;
 
     Scanner auswhal = new Scanner(System.in);
     Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
     long warennummer = 0;
+
+    public PruefControl(PruefeWare pruefeWare) {
+        this.pruefeWare = pruefeWare;
+    }
 
     public void handelPruefView() {
         do {

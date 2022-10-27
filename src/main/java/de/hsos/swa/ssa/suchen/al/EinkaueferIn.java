@@ -2,7 +2,7 @@ package de.hsos.swa.ssa.suchen.al;
 
 import java.util.List;
 
-import de.hsos.swa.ssa.suchen.acl.WarenkorbFuerSuche;
+import de.hsos.swa.ssa.suchen.acl.Warenkorb;
 import de.hsos.swa.ssa.suchen.bl.Produktinformation;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
@@ -38,20 +38,17 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     }
 
     @Override
-    public WarenkorbFuerSuche holeWarenkorb() {
-        // TODO Auto-generated method stub
-        return null;
+    public Warenkorb holeWarenkorb() {
+        return warenkorbVerwalten.warenkorbHolen();
     }
 
     @Override
-    public WarenkorbFuerSuche holeWarenkorb(long warenKorbNummer) {
-        // TODO Auto-generated method stub
-        return null;
+    public Warenkorb holeWarenkorb(long warenKorbNummer) {
+        return warenkorbVerwalten.warenkorbHolen(warenKorbNummer);
     }
 
     @Override
     public List<Ware> holeWaren() {
-        // TODO Auto-generated method stub
         return warenSuchenUndPruefen.getWaren();
     }
 

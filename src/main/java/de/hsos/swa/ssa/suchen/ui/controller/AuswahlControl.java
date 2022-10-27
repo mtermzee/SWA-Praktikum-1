@@ -2,7 +2,6 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 
 import java.util.Scanner;
 
-import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.WaehleWare;
 import de.hsos.swa.ssa.suchen.ui.view.AuswahlView;
 
@@ -11,13 +10,17 @@ public class AuswahlControl {
     AuswahlView auswahlView = new AuswahlView();
 
     // interface
-    WaehleWare waehleWare = new EinkaueferIn();
+    WaehleWare waehleWare;
 
     Scanner auswhal = new Scanner(System.in);
     Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
     long warennummer = 0;
+
+    public AuswahlControl(WaehleWare waehleWare) {
+        this.waehleWare = waehleWare;
+    }
 
     public void handelAuswahlView() {
         do {

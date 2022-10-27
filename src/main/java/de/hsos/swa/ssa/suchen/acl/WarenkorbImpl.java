@@ -23,19 +23,19 @@ public class WarenkorbImpl implements WarenkorbStaender, WarenkorbFuerSuche {
 
     @Override
     public long gebeWarenkorbNummer() {
-        // TODO Auto-generated method stub
-        return 0;
+        return this.currentWarenKorbID;
     }
 
     @Override
     public Warenkorb holeWarenkorb() {
-        // TODO Auto-generated method stub
-        return null;
+        return this.warenkorbMap.get(currentWarenKorbID);
     }
 
     @Override
     public Warenkorb holeWarenkorb(long warenKorbNummer) {
-        // TODO Auto-generated method stub
+        if (warenkorbMap.containsKey(warenKorbNummer)) {
+            return warenkorbMap.get(warenKorbNummer);
+        }
         return null;
     }
 
