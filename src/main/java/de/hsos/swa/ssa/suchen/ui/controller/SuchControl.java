@@ -3,6 +3,7 @@ package de.hsos.swa.ssa.suchen.ui.controller;
 import java.util.Scanner;
 
 import de.hsos.swa.ssa.suchen.al.SucheWare;
+import de.hsos.swa.ssa.suchen.bl.SuchAlgorithmus;
 import de.hsos.swa.ssa.suchen.ui.view.SuchView;
 
 public class SuchControl {
@@ -52,15 +53,16 @@ public class SuchControl {
         option = auswhal.nextLine();
         switch (option) {
             case "1":
-                // sucheWare = new SucheWare(new KeywordMatching());
-                System.out.println("Keyword Matching");
+                sucheWare.algoAsuweahlen(SuchAlgorithmus.KeywordMatching);
+                System.out.println("Keyword Matching...");
                 break;
             case "2":
-                // sucheWare = new SucheWare(new SemanticMatching());
-                System.out.println("Semantic Matching");
+                sucheWare.algoAsuweahlen(SuchAlgorithmus.SemanticMatching);
+                System.out.println("Semantic Matching...");
                 break;
             default:
-                System.out.println("Keyword Matching");
+                sucheWare.algoAsuweahlen(SuchAlgorithmus.KeywordMatching);
+                System.out.println("Keyword Matching...");
                 break;
         }
     }

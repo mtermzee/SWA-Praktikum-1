@@ -4,6 +4,7 @@ import java.util.List;
 
 import de.hsos.swa.ssa.suchen.bl.Katalog;
 import de.hsos.swa.ssa.suchen.bl.Produktinformation;
+import de.hsos.swa.ssa.suchen.bl.SuchAlgorithmus;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 import de.hsos.swa.ssa.suchen.dal.WarenRepository;
 
@@ -25,5 +26,9 @@ public class WarenSuchenUndPruefen {
 
     public List<Ware> getWaren() {
         return katalog.gebeWaren();
+    }
+
+    public void algoAsuweahlen(SuchAlgorithmus suchalgorithmus) {
+        katalog.legeSuchalgorithmusFest(suchalgorithmus);
     }
 }

@@ -18,19 +18,25 @@ public class WarenRepository implements Katalog {
     // Database
     ShopRepositoryDAO shopRepository = new ShopRepository();
 
+    // interface
+    WarenSuche wareSuche;
+
     Scanner input = new Scanner(System.in);
 
     @Override
     public void legeSuchalgorithmusFest(SuchAlgorithmus suchalgorithmus) {
-        // TODO Auto-generated method stub
-
+        if (suchalgorithmus == SuchAlgorithmus.KeywordMatching) {
+            wareSuche = new KeywordMatching();
+        } else if (suchalgorithmus == SuchAlgorithmus.SemanticMatching) {
+            wareSuche = new SemanticMatching();
+        }
     }
 
     @Override
     public List<Ware> suchen(String wareName) {
         List<Ware> wares = new ArrayList<Ware>();
         try {
-            wares = this.shopRepository.select(wareName);
+            wares = this.shopRepository.select(wareName, wareSuche.gebeSqlFuerSucheWare());
             if (wares != null) {
                 wares.forEach(System.out::println);
                 System.out.println("waren gefunden = " + wares.size());

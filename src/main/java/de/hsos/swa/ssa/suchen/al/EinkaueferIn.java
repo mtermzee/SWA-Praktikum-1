@@ -4,6 +4,7 @@ import java.util.List;
 
 import de.hsos.swa.ssa.suchen.acl.Warenkorb;
 import de.hsos.swa.ssa.suchen.bl.Produktinformation;
+import de.hsos.swa.ssa.suchen.bl.SuchAlgorithmus;
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
 public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, WaehleWare {
@@ -55,5 +56,10 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     @Override
     public void aktuellerWarenkorbWechseln(long warenNummer) {
         warenkorbVerwalten.aktuelleWarenkorb(warenNummer);
+    }
+
+    @Override
+    public void algoAsuweahlen(SuchAlgorithmus suchalgorithmus) {
+        warenSuchenUndPruefen.algoAsuweahlen(suchalgorithmus);
     }
 }

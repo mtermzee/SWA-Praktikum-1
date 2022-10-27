@@ -21,8 +21,7 @@ public class ShopRepository implements ShopRepositoryDAO {
     // Define SQL sentences
     private static final String SQL_SELECT = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware";
     private static final String SQL_SELECT_ONE_BY_ID = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warenummer = ?";
-    private static final String SQL_SELECT_ONE_BY_NAME = "SELECT warenummer, warename, ware_preis, ware_beschreibung FROM ware WHERE warename = ?";
-    private static final String SQL_SELECT_ONE_BY_INFO = "SELECT wareinfo_nr, wareinfo_bezeichnung, wareinfo_information FROM wareinformation WHERE warenummer = ?";
+    private static final String SQL_SELECT_BY_INFO = "SELECT wareinfo_nr, wareinfo_bezeichnung, wareinfo_information FROM wareinformation WHERE warenummer = ?";
     private static final String SQL_INSERT = "INSERT INTO ware(warenummer, warename, ware_preis, ware_beschreibung) VALUES (?,?,?,?)";
     private static final String SQL_UPDATE = "UPDATE ware SET warename=?, ware_preis=?, ware_beschreibung=? WHERE warenummer = ?";
     private static final String SQL_DELETE = "DELETE FROM ware WHERE warenummer = ?";
@@ -183,7 +182,7 @@ public class ShopRepository implements ShopRepositoryDAO {
     }
 
     @Override
-    public List<Ware> select(String productName) throws SQLException {
+    public List<Ware> select(String productName, String SqlSelect) throws SQLException {
         Connection conn = null;
         PreparedStatement pStatement = null;
         ResultSet rs = null;
@@ -191,7 +190,7 @@ public class ShopRepository implements ShopRepositoryDAO {
 
         try {
             conn = this.transConnection != null ? this.transConnection : getConnection();
-            pStatement = conn.prepareStatement(SQL_SELECT_ONE_BY_NAME);
+            pStatement = conn.prepareStatement(SqlSelect);
             pStatement.setString(1, productName);
             rs = pStatement.executeQuery();
             while (rs.next()) {
@@ -272,7 +271,7 @@ public class ShopRepository implements ShopRepositoryDAO {
 
         try {
             conn = this.transConnection != null ? this.transConnection : getConnection();
-            pStatement = conn.prepareStatement(SQL_SELECT_ONE_BY_INFO);
+            pStatement = conn.prepareStatement(SQL_SELECT_BY_INFO);
             pStatement.setLong(1, productID);
             rs = pStatement.executeQuery();
             while (rs.next()) {
