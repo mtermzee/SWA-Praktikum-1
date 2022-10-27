@@ -1,4 +1,4 @@
--- Active: 1662967369138@@127.0.0.1@3306@test_simple_shop
+-- Active: 1649604676347@@127.0.0.1@3306@test_simple_shop
 
 CREATE TABLE
     ware (
