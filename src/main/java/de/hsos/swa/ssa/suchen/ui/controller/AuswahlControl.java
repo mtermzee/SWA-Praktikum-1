@@ -28,7 +28,7 @@ public class AuswahlControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println("Warenkorb Nummer eingeben");
+                    System.out.println("Warenkorb Nummer eingeben: ");
                     warennummer = input.nextLong();
                     waehleWare.aktuellerWarenkorbWechseln(warennummer);
                     break;
