@@ -4,7 +4,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
-import java.util.Scanner;
 
 import de.hsos.swa.ssa.JDBC.repository.ShopRepository;
 import de.hsos.swa.ssa.JDBC.repository.dao.ShopRepositoryDAO;
@@ -20,8 +19,6 @@ public class WarenRepository implements Katalog {
 
     // interface
     WarenSuche wareSuche;
-
-    Scanner input = new Scanner(System.in);
 
     @Override
     public void legeSuchalgorithmusFest(SuchAlgorithmus suchalgorithmus) {
@@ -44,13 +41,12 @@ public class WarenRepository implements Katalog {
             if (wares.size() == 0) {
                 System.out.println("ware not found");
             }
-            input.nextLine();
+
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
         return wares;
     }
@@ -65,13 +61,12 @@ public class WarenRepository implements Katalog {
             } else {
                 System.out.println("ware not found");
             }
-            input.nextLine();
+
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
         return ware;
     }
@@ -88,13 +83,12 @@ public class WarenRepository implements Katalog {
             if (wareInfos.size() == 0) {
                 System.out.println("ware not found");
             }
-            input.nextLine();
+
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
         return wareInfos;
     }
@@ -108,8 +102,7 @@ public class WarenRepository implements Katalog {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
         return wares;
     }
@@ -122,8 +115,7 @@ public class WarenRepository implements Katalog {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
 
     }
@@ -136,8 +128,7 @@ public class WarenRepository implements Katalog {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
 
     }
@@ -150,8 +141,7 @@ public class WarenRepository implements Katalog {
             System.err.println(ex.getMessage());
         } catch (InputMismatchException ex) {
             System.out.println("oh no! the input was type wrong.\n come back and try again.");
-            input.nextLine();
-            input.nextLine();
+
         }
     }
 

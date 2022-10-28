@@ -68,7 +68,11 @@ public class WareControl {
                 case "3":
                     System.out.println("Warennummer eingeben: ");
                     warennummer = input.nextLong();
-                    waehleWare.deleteWare(warennummer);
+                    ware = waehleWare.sucheWare(warennummer);
+                    if (ware != null) {
+                        waehleWare.deleteWare(warennummer);
+                        System.out.println("Ware wurde gelöscht");
+                    }
                     break;
                 default:
                     System.out.println("Zurück...");
