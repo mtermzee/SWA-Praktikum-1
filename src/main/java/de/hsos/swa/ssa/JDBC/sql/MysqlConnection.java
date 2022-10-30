@@ -5,8 +5,8 @@ import java.sql.*;
 public class MysqlConnection {
     private static String dbURL = "jdbc:mysql://localhost:3306/test_simple_shop?useUnicode=true&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private static String user = "root";
-    private static String password = "admin";
-    // private static String password = "";
+    // private static String password = "admin";
+    private static String password = "";
     private static String host = "localhost";
     private static int port = 3306;
     private static String database = "test_simple_shop";

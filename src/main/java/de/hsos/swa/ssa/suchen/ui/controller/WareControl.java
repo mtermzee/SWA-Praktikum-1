@@ -14,10 +14,9 @@ public class WareControl {
     VerwalteWare waehleWare;
 
     Scanner auswhal = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
-    long warennummer = 0;
+    long warennummer;
 
     public WareControl(VerwalteWare waehleWare) {
         this.waehleWare = waehleWare;
@@ -29,33 +28,26 @@ public class WareControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println("Warenname eingeben: ");
-                    String warenname = input.next();
-                    System.out.println("Preis eingeben: ");
-                    double preis = input.nextDouble();
-                    System.out.println("Beschreibung eingeben: ");
-                    String beschreibung = input.next();
+                    String warenname = wareView.inputWarename();
+                    double preis = wareView.inputPreis();
+                    String beschreibung = wareView.inputBeschreibung();
                     Ware ware = new Ware(warenname, preis, beschreibung);
                     waehleWare.addWare(ware);
                     System.out.println("Ware wurde hinzugefügt");
                     break;
                 case "2":
-                    System.out.println("Warennummer eingeben: ");
-                    warennummer = input.nextLong();
+                    warennummer = wareView.inputWarenummer();
                     Ware tempWare = waehleWare.sucheWare(warennummer);
                     if (tempWare != null) {
-                        System.out.println("Warenname eingeben: ");
-                        String tempWarenname = input.next();
+                        String tempWarenname = wareView.inputWarename();
                         if (!tempWarenname.equals("")) {
                             tempWare.setName(tempWarenname);
                         }
-                        System.out.println("Preis eingeben: ");
-                        double tempPreis = input.nextDouble();
+                        double tempPreis = wareView.inputPreis();
                         if (tempPreis != 0) {
                             tempWare.setPreis(tempPreis);
                         }
-                        System.out.println("Beschreibung eingeben: ");
-                        String tempBeschreibung = input.next();
+                        String tempBeschreibung = wareView.inputBeschreibung();
                         if (!tempBeschreibung.equals("")) {
                             tempWare.setBeschreibung(tempBeschreibung);
                         }
@@ -66,8 +58,7 @@ public class WareControl {
                     }
                     break;
                 case "3":
-                    System.out.println("Warennummer eingeben: ");
-                    warennummer = input.nextLong();
+                    warennummer = wareView.inputWarenummer();
                     ware = waehleWare.sucheWare(warennummer);
                     if (ware != null) {
                         waehleWare.deleteWare(warennummer);
