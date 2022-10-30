@@ -14,11 +14,8 @@ public class SuchControl {
     SucheWare sucheWare;
 
     Scanner auswhal = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
-    long warennummer = 0;
-    String warenname = "";
 
     public SuchControl(SucheWare sucheWare) {
         this.sucheWare = sucheWare;
@@ -31,14 +28,12 @@ public class SuchControl {
             switch (option) {
                 case "1":
                     switchAlgorithmus();
-                    System.out.println("Warenname eingeben: ");
-                    warenname = input.nextLine();
-                    sucheWarenMitName(warenname);
+                    String warename = suchView.inputWarename();
+                    sucheWarenMitName(warename);
                     break;
                 case "2":
-                    System.out.println("Warennummer eingeben: ");
-                    warennummer = input.nextLong();
-                    sucheWarenMitNummer(warennummer);
+                    long warenummer = suchView.inputWarenummer();
+                    sucheWarenMitNummer(warenummer);
                     break;
                 default:
                     System.out.println("Zurück...");

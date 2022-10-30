@@ -13,10 +13,8 @@ public class PruefControl {
     PruefeWare pruefeWare;
 
     Scanner auswhal = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
-    long warennummer = 0;
 
     public PruefControl(PruefeWare pruefeWare) {
         this.pruefeWare = pruefeWare;
@@ -28,8 +26,7 @@ public class PruefControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println("Warennummer eingeben: ");
-                    warennummer = input.nextLong();
+                    long warennummer = pruefView.inputWarenummer();
                     holeWarenInfo(warennummer);
                     break;
                 default:

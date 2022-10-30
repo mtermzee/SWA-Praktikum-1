@@ -1,129 +1,129 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>400</x><y>540</y><w>1650</w><h>400</h></coordinates><panel_attributes>de.hsos.swa.ssa.ui
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLPackage</id><coordinates><x>360</x><y>486</y><w>1485</w><h>360</h></coordinates><panel_attributes>de.hsos.swa.ssa.ui
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>690</y><w>90</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
-</panel_attributes><additional_attributes>10;100;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>930</x><y>690</y><w>100</w><h>120</h></coordinates><panel_attributes>lt=&lt;-
-</panel_attributes><additional_attributes>80;100;80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>580</y><w>730</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;10;10;710;10;710;130</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>400</x><y>990</y><w>2510</w><h>2450</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>621</y><w>81</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>10;100;10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>837</x><y>621</y><w>90</w><h>108</h></coordinates><panel_attributes>lt=&lt;-
+</panel_attributes><additional_attributes>80;100;80;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>738</x><y>522</y><w>657</w><h>135</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;10;10;710;10;710;130</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>360</x><y>891</y><w>2259</w><h>2205</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>3020</x><y>810</y><w>650</w><h>420</h></coordinates><panel_attributes>de.hsos.swa.ssa.JDBC
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2718</x><y>729</y><w>585</w><h>378</h></coordinates><panel_attributes>de.hsos.swa.ssa.JDBC
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>150</x><y>4150</y><w>80</w><h>100</h></coordinates><panel_attributes>Interface
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>135</x><y>3735</y><w>72</w><h>90</h></coordinates><panel_attributes>Interface
 --
 Operation1
-Operation2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>430</x><y>1030</y><w>1750</w><h>490</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui
+Operation2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>387</x><y>927</y><w>1575</w><h>441</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>470</x><y>1090</y><w>860</w><h>390</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui.controller
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>423</x><y>981</y><w>774</w><h>351</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui.controller
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1370</x><y>1100</y><w>780</w><h>380</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui.view
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1233</x><y>990</y><w>702</w><h>342</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.ui.view
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1650</x><y>1160</y><w>210</w><h>70</h></coordinates><panel_attributes>SuchenStartView
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1485</x><y>1044</y><w>189</w><h>63</h></coordinates><panel_attributes>SuchenStartView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1660</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>PruefView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1494</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>PruefView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1910</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>AuswahlView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1719</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>AuswahlView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1410</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>SuchView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1269</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>SuchView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>1160</y><w>210</w><h>70</h></coordinates><panel_attributes>SuchenStartControl
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>459</x><y>1044</y><w>189</w><h>63</h></coordinates><panel_attributes>SuchenStartControl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>SuchControl
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>504</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>SuchControl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>PruefControl
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>720</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>PruefControl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1060</x><y>1300</y><w>210</w><h>70</h></coordinates><panel_attributes>AuswahlControl
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>954</x><y>1170</y><w>189</w><h>63</h></coordinates><panel_attributes>AuswahlControl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>770</y><w>980</w><h>410</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;390;10;190;960;190;960;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>1060</y><w>1160</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>1140;100;1140;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>1220</y><w>530</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>510;80;510;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>1220</y><w>310</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>290;80;290;60;10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>1220</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>1220</y><w>30</w><h>500</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;480;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1150</x><y>1360</y><w>900</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>1360</y><w>900</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;70;10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>1360</y><w>900</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;90;10;90;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>480</x><y>610</y><w>700</w><h>280</h></coordinates><panel_attributes>de.hsos.swa.view
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>693</y><w>882</w><h>369</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;390;10;190;960;190;960;10</additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>954</y><w>1044</w><h>108</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>1140;100;1140;10;10;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>585</x><y>1098</y><w>477</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>510;80;510;40;10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>558</x><y>1098</y><w>279</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>290;80;290;60;10;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>522</x><y>1098</y><w>27</w><h>90</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>468</x><y>1098</y><w>27</w><h>450</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;480;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1035</x><y>1224</y><w>810</w><h>63</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;50;10;50;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>801</x><y>1224</y><w>810</w><h>81</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;70;10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>1224</y><w>810</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>880;10;880;90;10;90;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>432</x><y>549</y><w>630</w><h>252</h></coordinates><panel_attributes>de.hsos.swa.view
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1310</x><y>610</y><w>430</w><h>280</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>1179</x><y>549</y><w>387</w><h>252</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1430</x><y>710</y><w>210</w><h>70</h></coordinates><panel_attributes>MenueControl
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1287</x><y>639</y><w>189</w><h>63</h></coordinates><panel_attributes>MenueControl
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>790</y><w>210</w><h>70</h></coordinates><panel_attributes>MenueView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>819</x><y>711</y><w>189</w><h>63</h></coordinates><panel_attributes>MenueView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>660</y><w>210</w><h>70</h></coordinates><panel_attributes>SimpleShoppingAppView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>657</x><y>594</y><w>189</w><h>63</h></coordinates><panel_attributes>SimpleShoppingAppView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>790</y><w>210</w><h>70</h></coordinates><panel_attributes>BegruessungView
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>513</x><y>711</y><w>189</w><h>63</h></coordinates><panel_attributes>BegruessungView
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>430</x><y>1610</y><w>1750</w><h>540</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.al
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>387</x><y>1449</y><w>1575</w><h>486</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.al
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>1530</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 HoleWarenkorb
 --
 +holeWarenkorb() : WarenkorbStaender
-+holeWarenkorb(wrenkorbnummer : long) : WarenkorbStaender</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>900</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
++holeWarenkorb(wrenkorbnummer : long) : WarenkorbStaender</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>1530</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 SucheWare
 --
 +sucheWare(warenname : string) : Ware [0..n]
-+sucheWare(warennummer : long) : Ware</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1770</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
++sucheWare(wareNummer : long) : Ware</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1593</x><y>1530</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 WaehleWare
 --
-+wareZuWarenkorbHinzufuegen(ware : Ware) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1340</x><y>1700</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
++wareZuWarenkorbHinzufuegen(wareNummer : long) : boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1206</x><y>1530</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 PruefeWare
 --
-+holeDetailinformation(ware : Ware) : Produktinformation [0..n]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1130</x><y>1870</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
++holeDetailinformation(wareNummer : long) : Produktinformation [0..n]</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1017</x><y>1683</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
 EinkaueferIn
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>2040</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>549</x><y>1836</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
 WarenSuchenUndPruefen
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1570</x><y>2040</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1413</x><y>1836</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
 WarenkorbVerwalten
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1360</y><w>510</w><h>360</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>490;340;490;230;10;230;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>1360</y><w>690</w><h>360</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>670;340;670;210;10;210;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>1360</y><w>870</w><h>360</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>850;340;850;190;10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1370</x><y>1780</y><w>190</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>170;10;170;50;10;50;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1080</x><y>1780</y><w>190</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50;170;50;170;90</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>1780</y><w>520</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140;500;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1510</x><y>1780</y><w>480</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>460;10;460;140;10;140;20;140</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>1950</y><w>520</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;40;500;40;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1330</x><y>1950</y><w>460</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>440;90;440;40;10;40;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2230</x><y>1450</y><w>640</w><h>700</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.acl
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>1224</y><w>459</w><h>324</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>490;340;490;230;10;230;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>774</x><y>1224</y><w>621</w><h>324</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>670;340;670;210;10;210;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1008</x><y>1224</y><w>783</w><h>324</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>850;340;850;190;10;190;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1233</x><y>1602</y><w>171</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>170;10;170;50;10;50;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>972</x><y>1602</y><w>171</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;50;170;50;170;90</additional_attributes></element><element><id>Relation</id><coordinates><x>567</x><y>1602</y><w>468</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;140;500;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1359</x><y>1602</y><w>432</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>460;10;460;140;10;140;20;140</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>1755</y><w>468</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;40;500;40;500;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1197</x><y>1755</y><w>414</w><h>99</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>440;90;440;40;10;40;10;10</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>2007</x><y>1305</y><w>576</w><h>630</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.acl
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2360</x><y>1690</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2124</x><y>1521</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 WarenkorbStaender
 --
 +holeWarenkorb() : Warenkorb
-+holeWarenkorb(warenkobnummer : long) : Warenkorb</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2360</x><y>1830</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
++holeWarenkorb(warenkobnummer : long) : Warenkorb</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2124</x><y>1647</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 WarenkorbFuerSuche
 --
 wareHinzufuegen(ware : WareDTO)
-+gebeWarenkorbnummer() : long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2360</x><y>1970</y><w>390</w><h>150</h></coordinates><panel_attributes>WareDTO
++gebeWarenkorbnummer() : long</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2124</x><y>1773</y><w>351</w><h>135</h></coordinates><panel_attributes>WareDTO
 --
 nummer : long
 +name : string
-+preis : Geld
++preis : double
 +beschreibung : string
 --
 &lt;&lt;Service&gt;&gt;
 WarenKonverter
 --
-+wareToDto(ware : Ware) : WareDTO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1950</x><y>1880</y><w>430</w><h>200</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>410;10;330;10;330;70;190;70;190;180;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1900</x><y>1730</y><w>480</w><h>330</h></coordinates><panel_attributes>lt=&lt;..
-&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>460;10;380;10;380;120;160;120;160;250;10;250;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>1950</x><y>2080</y><w>430</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
-konverter</panel_attributes><additional_attributes>410;20;10;20</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>430</x><y>2220</y><w>1750</w><h>540</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.bl
++wareToDto(ware : Ware) : WareDTO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1755</x><y>1692</y><w>387</w><h>180</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>410;10;330;10;330;70;190;70;190;180;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>1710</x><y>1557</y><w>432</w><h>297</h></coordinates><panel_attributes>lt=&lt;..
+&lt;&lt;use&gt;&gt;</panel_attributes><additional_attributes>460;10;380;10;380;120;160;120;160;250;10;250;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>1755</x><y>1872</y><w>387</w><h>36</h></coordinates><panel_attributes>lt=&lt;-
+konverter</panel_attributes><additional_attributes>410;20;10;20</additional_attributes></element><element><id>UMLPackage</id><coordinates><x>387</x><y>1998</y><w>1575</w><h>486</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.bl
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>430</x><y>2820</y><w>1750</w><h>540</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.dal
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>387</x><y>2538</y><w>1575</w><h>486</h></coordinates><panel_attributes>de.hsos.swa.ssa.suchen.dal
 --
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>2340</y><w>180</w><h>80</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>2106</y><w>162</w><h>72</h></coordinates><panel_attributes>&lt;&lt;enumeration&gt;&gt;
 SuchAlgorithmus
 --
 KeywordMatching
-SemanticMatching</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>2340</y><w>310</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+SemanticMatching</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>918</x><y>2106</y><w>279</w><h>99</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 Katalog
 --
 +legeSuchalgorihtmusFest(algo : SuchAlgorithmus)
 +suchen(warenname : string) : Ware [0..n]
 +suchen(warenNummer : long) : Ware [0..n]
-+gebeProduktinformation(ware : Ware)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>2530</y><w>150</w><h>110</h></coordinates><panel_attributes>&lt;&lt;Aggregate&gt;&gt;
++gebeProduktinformation(wareNummer : long)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>2277</y><w>135</w><h>99</h></coordinates><panel_attributes>&lt;&lt;Aggregate&gt;&gt;
 Ware
 --
 -warennummer : long
 -name : string
 -preis : Geld
--beschreibung : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1380</x><y>2540</y><w>150</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Object Value&gt;&gt;
+-beschreibung : string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1242</x><y>2286</y><w>135</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Object Value&gt;&gt;
 Produktinformation
 --
 -bezeichnung : string
--information : Object</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>2960</y><w>160</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Repository&gt;&gt;
+-information : Object</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>981</x><y>2664</y><w>144</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Repository&gt;&gt;
 WarenRepository
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>2970</y><w>260</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>549</x><y>2673</y><w>234</w><h>72</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
 WarenSuche
 --
-+sucheWare(suchbegriff : string) : Ware</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>3150</y><w>130</w><h>80</h></coordinates><panel_attributes>KeywordMatching
++sucheWare(suchbegriff : string) : Ware</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>2835</y><w>117</w><h>72</h></coordinates><panel_attributes>KeywordMatching
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>3150</y><w>130</w><h>80</h></coordinates><panel_attributes>SemanticMatching
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>684</x><y>2835</y><w>117</w><h>72</h></coordinates><panel_attributes>SemanticMatching
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>3040</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>3040</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>860</x><y>3000</y><w>250</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1160</x><y>2630</y><w>30</w><h>350</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1240</x><y>2380</y><w>370</w><h>650</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>90;10;350;10;350;630;10;630</additional_attributes></element><element><id>Relation</id><coordinates><x>1230</x><y>2580</y><w>170</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>2120</y><w>410</w><h>240</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>390;220;390;70;10;70;10;10</additional_attributes></element><element><id>UMLInterface</id><coordinates><x>0</x><y>0</y><w>80</w><h>100</h></coordinates><panel_attributes>Interface
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>585</x><y>2736</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>738</x><y>2736</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>774</x><y>2700</y><w>225</w><h>27</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;230;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1044</x><y>2367</y><w>27</w><h>315</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;330</additional_attributes></element><element><id>Relation</id><coordinates><x>1116</x><y>2142</y><w>333</w><h>585</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>90;10;350;10;350;630;10;630</additional_attributes></element><element><id>Relation</id><coordinates><x>1107</x><y>2322</y><w>153</w><h>27</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>150;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>1908</y><w>369</w><h>216</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>390;220;390;70;10;70;10;10</additional_attributes></element><element><id>UMLInterface</id><coordinates><x>0</x><y>0</y><w>72</w><h>90</h></coordinates><panel_attributes>Interface
 --
 Operation1
-Operation2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2360</x><y>1510</y><w>390</w><h>90</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+Operation2</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2124</x><y>1359</y><w>351</w><h>81</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
 WarenkorbImpl
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2550</x><y>1590</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2740</x><y>1550</y><w>100</w><h>350</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;330;80;330;80;10;10;10</additional_attributes></element></diagram>
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2295</x><y>1431</y><w>27</w><h>108</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>2466</x><y>1395</y><w>90</w><h>315</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;330;80;330;80;10;10;10</additional_attributes></element></diagram>

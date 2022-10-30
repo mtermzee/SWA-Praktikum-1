@@ -1,10 +1,12 @@
 package de.hsos.swa.ssa.suchen.ui.view;
 
 import java.util.List;
+import java.util.Scanner;
 
 import de.hsos.swa.ssa.suchen.bl.Ware;
 
 public class AuswahlView {
+    Scanner input = new Scanner(System.in);
 
     public void auswahlStartListe() {
         System.out.println();
@@ -21,4 +23,17 @@ public class AuswahlView {
         } else
             waren.forEach(System.out::println);
     }
+
+    public long inputWarekorbNummer() {
+        System.out.println("Warenkorb Nummer eingeben: ");
+        long warenkorbnummer = input.nextLong();
+        return warenkorbnummer;
+    }
+
+    public long inputWarenummer() {
+        System.out.println("Warennummer eingeben: ");
+        long warennummer = input.nextLong();
+        return warennummer;
+    }
+
 }

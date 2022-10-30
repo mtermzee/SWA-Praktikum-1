@@ -13,10 +13,9 @@ public class AuswahlControl {
     WaehleWare waehleWare;
 
     Scanner auswhal = new Scanner(System.in);
-    Scanner input = new Scanner(System.in);
     String option;
     boolean weiter = true;
-    long warennummer = 0;
+    long nummer;
 
     public AuswahlControl(WaehleWare waehleWare) {
         this.waehleWare = waehleWare;
@@ -28,14 +27,12 @@ public class AuswahlControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println("Warenkorb Nummer eingeben: ");
-                    warennummer = input.nextLong();
-                    waehleWare.aktuellerWarenkorbWechseln(warennummer);
+                    nummer = auswahlView.inputWarekorbNummer();
+                    waehleWare.aktuellerWarenkorbWechseln(nummer);
                     break;
                 case "2":
-                    System.out.println("Warennummer eingeben: ");
-                    warennummer = input.nextLong();
-                    waehleWare(warennummer);
+                    nummer = auswahlView.inputWarenummer();
+                    waehleWare(nummer);
                     break;
                 case "3":
                     auswahlView.druckWaren(waehleWare.holeWaren());
