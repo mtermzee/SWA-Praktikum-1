@@ -15,12 +15,16 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     @Override
     public boolean wareZuWarenkorbHinzufuegen(long wareNummer) {
         Ware ware = sucheWare(wareNummer);
-        // System.out.println("EinkaueferIn: " + ware);
         if (ware != null) {
             warenkorbVerwalten.wareZuWarenkorbSenden(ware);
             return true;
         } else
             return false;
+    }
+
+    @Override
+    public boolean wareAusWarenkorbLoeschen(long wareNummer) {
+        return warenkorbVerwalten.wareZuWarenkorbLoeschen(wareNummer);
     }
 
     @Override
@@ -77,4 +81,5 @@ public class EinkaueferIn implements HoleWarenkorb, SucheWare, PruefeWare, Waehl
     public void updateWare(Ware ware) {
         warenSuchenUndPruefen.wareAendern(ware);
     }
+
 }

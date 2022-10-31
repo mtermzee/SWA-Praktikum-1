@@ -26,6 +26,10 @@ public class WarenkorbVerwalten {
         warenkorbFuerSuche.wareHinzufuegen(konvDto);
     }
 
+    public boolean wareZuWarenkorbLoeschen(long wareNummer) {
+        return warenkorbFuerSuche.wareLoeschen(wareNummer);
+    }
+
     public void aktuelleWarenkorb(long wareNummer) {
         warenkorbStaender.aktuellerWarenkorbWechseln(wareNummer);
     }

@@ -44,6 +44,16 @@ public class Warenkorb {
         System.out.println(this);
     }
 
+    public boolean deleteWare(long id) {
+        for (WareDTO ware : waren) {
+            if (ware.nummer == id) {
+                waren.remove(ware);
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;

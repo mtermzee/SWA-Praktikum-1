@@ -31,6 +31,15 @@ public class AuswahlControl {
                     waehleWare(nummer);
                     break;
                 case "2":
+                    nummer = auswahlView.inputWarenummer();
+                    boolean deleted = waehleWareLoeschen(nummer);
+                    if (deleted) {
+                        System.out.println("Ware wurde gelöscht");
+                    } else {
+                        System.out.println("Ware liegt nicht im Warenkorb");
+                    }
+                    break;
+                case "3":
                     auswahlView.druckWaren(waehleWare.holeWaren());
                     break;
                 default:
@@ -43,6 +52,10 @@ public class AuswahlControl {
 
     public void waehleWare(long warennummer) {
         waehleWare.wareZuWarenkorbHinzufuegen(warennummer);
+    }
+
+    public boolean waehleWareLoeschen(long warennummer) {
+        return waehleWare.wareAusWarenkorbLoeschen(warennummer);
     }
 
     public void aktuellerWarenkorbWechseln(long warenkorbNummer) {

@@ -22,6 +22,12 @@ public class WarenkorbImpl implements WarenkorbStaender, WarenkorbFuerSuche {
     }
 
     @Override
+    public boolean wareLoeschen(long wareNummer) {
+        Warenkorb warenkorb = warenkorbMap.get(currentWarenKorbID);
+        return warenkorb.deleteWare(wareNummer);
+    }
+
+    @Override
     public long gebeWarenkorbNummer() {
         return this.currentWarenKorbID;
     }

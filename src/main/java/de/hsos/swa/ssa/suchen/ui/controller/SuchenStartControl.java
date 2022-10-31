@@ -37,6 +37,7 @@ public class SuchenStartControl {
         suchenStartView = new SuchenStartView();
         holeWarenkorb = einkaueferIn;
         userKatalog = new UserVerwaltung();
+        auswahlControl.aktuellerWarenkorbWechseln(userKatalog.gebeAktuelleUserID());
     }
 
     public void handelSuchenStartView() {
