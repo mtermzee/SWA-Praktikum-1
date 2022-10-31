@@ -5,6 +5,8 @@ import java.util.Scanner;
 import de.hsos.swa.ssa.suchen.al.EinkaueferIn;
 import de.hsos.swa.ssa.suchen.al.HoleWarenkorb;
 import de.hsos.swa.ssa.suchen.ui.view.SuchenStartView;
+import de.hsos.swa.ssa.suchen.us.UserKatalog;
+import de.hsos.swa.ssa.suchen.us.UserVerwaltung;
 
 public class SuchenStartControl {
     // controllers
@@ -18,6 +20,7 @@ public class SuchenStartControl {
 
     // interface
     HoleWarenkorb holeWarenkorb;
+    UserKatalog userKatalog;
 
     Scanner auswhal = new Scanner(System.in);
     Scanner input = new Scanner(System.in);
@@ -33,6 +36,7 @@ public class SuchenStartControl {
         wareControl = new WareControl(einkaueferIn);
         suchenStartView = new SuchenStartView();
         holeWarenkorb = einkaueferIn;
+        userKatalog = new UserVerwaltung();
     }
 
     public void handelSuchenStartView() {
@@ -41,21 +45,34 @@ public class SuchenStartControl {
             option = auswhal.nextLine();
             switch (option) {
                 case "1":
-                    suchControl.handelSuchView();
+                    System.out.println("Hallo " + userKatalog.gebeUsername());
+                    System.out.println("Username eingeben:");
+                    String username = input.next();
+                    boolean userVorhanden = userKatalog.wechselUser(username);
+                    auswahlControl.aktuellerWarenkorbWechseln(userKatalog.gebeAktuelleUserID());
+                    if (userVorhanden) {
+                        System.out.println("Welcome back " + userKatalog.gebeUsername());
+                    } else {
+                        System.out.println("Welcome in unserem Shop " + userKatalog.gebeUsername());
+                    }
+
                     break;
                 case "2":
-                    pruefControl.handelPruefView();
+                    suchControl.handelSuchView();
                     break;
                 case "3":
-                    wareControl.handelWareView();
+                    pruefControl.handelPruefView();
                     break;
                 case "4":
-                    auswahlControl.handelAuswahlView();
+                    wareControl.handelWareView();
                     break;
                 case "5":
-                    holeWareAusWarenkorb();
+                    auswahlControl.handelAuswahlView();
                     break;
                 case "6":
+                    holeWareAusWarenkorb();
+                    break;
+                case "7":
                     System.out.println("Warennummer eingeben: ");
                     warennummer = input.nextLong();
                     holeWareAusWarenkorbMitNummer(warennummer);
